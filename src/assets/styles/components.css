@@ -1,0 +1,130 @@
+/* General CComponent Styles */
+.logo,
+.header,
+.textInput,
+.selectInput,
+.redioGroup,
+.userRating,
+.dateInput,
+.textContainer {
+  border-radius: 10px;
+  background: #fff;
+  width: 100%;
+  margin-top: 15px;
+  border: solid 1px #807f7f;
+}
+
+.textInput span,
+.selectInput span,
+.redioGroup .span,
+.userRating .span,
+.dateInput .span {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+sup {
+  color: red;
+}
+
+.wrapper {
+  padding: 20px 20px;
+}
+
+.MuiFormControl-root {
+  width: 50%;
+}
+
+.header,
+.textInput {
+  padding: 5px 0px 20px 0px;
+}
+
+/* Header and Logo Styles */
+.logo {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header {
+  text-align: justify;
+}
+
+.header h1 {
+  font-size: 24pt;
+  padding: 5px 10px 0px 10px;
+}
+
+.header p {
+  font-size: 16px;
+  padding: 5px 10px 0px 10px;
+  line-height: 1.5;
+}
+
+/* textInput  component styles*/
+
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #000 !important;
+}
+.textInput .css-1ptx2yq-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 2px solid red !important;
+}
+
+/* SelectInput component Styles */
+
+.selectInput span {
+  margin-bottom: 20px;
+}
+
+label[data-shrink="false"]
+  + .MuiInputBase-formControl
+  .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  line-height: 0.5;
+}
+
+.selectInput .MuiFormControl-root{
+    padding-bottom: 20px;
+}
+
+
+/* userRating component styles */
+
+.MuiBox-root{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.css-dqr9h-MuiRating-label{
+  padding: 0 5px;
+}
+
+
+/* dateInput component styles */
+
+
+
+/* Text component */
+.textContainer h3{
+  font-weight: 400;
+  padding: 0;
+}
+
+.error{
+  font-size: 12px;
+  color: red !important;
+}
+
+
+.loading_modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.5);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
