@@ -6,6 +6,20 @@
   /* text-align: center; */
 }
 
+@media screen and (max-width: 678px){
+  .App{
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+  legend{
+    display: none;
+  }
+}
+  
+
 .App-logo {
   height: 30vmin;
   pointer-events: none;
