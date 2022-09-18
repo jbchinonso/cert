@@ -28,7 +28,7 @@ function Cert() {
       pdf.addImage(canvas.toDataURL("image/png"), 'PNG', 0, 0, 888, 600)
     })
 
-    pdf.save("document.pdf")
+    pdf.save(`${partnerData.fullname}.pdf`)
 }
 
 

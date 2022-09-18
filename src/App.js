@@ -12,14 +12,12 @@ import PageLoader from "./components/PageLoader";
 import { ToastContainer } from "react-toastify";
 import toaster from "./toaster";
 import validator from "./validator";
-
 import { useAppContext } from "./AppContext";
-
 import "./App.css";
 
 function App() {
   const { partnerData, setPage, errors, setErrors } = useAppContext();
-  const [ loading, setLoading ] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const generateCert = async (e) => {
     e.preventDefault();
@@ -36,19 +34,23 @@ function App() {
       body: JSON.stringify(partnerData),
     };
 
-    const resp = await fetch(
-      "http://localhost:3000/cert/user/save",
-      requestOptions
-    );
-    const data = await resp.json();
+    try {
+      const url = process.env.REACT_APP_BASE_URL;
+      const resp = await fetch(`${url}cert/user/save`, requestOptions);
+      const data = await resp.json();
+      setLoading(false);
 
-    setLoading(false);
+      if (data.status === 400) {
+        toaster("error", data.message, 3000);
+        return;
+      }
 
-    if (data.status === 400) {
-      toaster("error", data.message, 3000);
+      setPage("Cert");
+    } catch (error) {
+      setLoading(false);
+      toaster("error", error.message, 3000);
       return;
     }
-    setPage("Cert");
   };
 
   return (
