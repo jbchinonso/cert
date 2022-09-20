@@ -52,13 +52,13 @@ function Cert() {
         <div className="content">
           <img src={GLAlogo} alt="GLA Logo" />
           <div className="cert_title">
-            <span> certificate of participation </span>
+            <span> Certificate of Participation </span>
             <span className="cert_sub_title">This is to certify that</span>
           </div>
 
           <div className="cert_holder">{partnerData.fullname}</div>
           <div className="empowered">
-            has been empowered with our <b>leadership Development Course</b>
+            has been empowered with our <b>Leadership Development Course</b>
             <br />
             titled{" "}
             <span className="course">
