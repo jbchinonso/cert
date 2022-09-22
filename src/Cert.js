@@ -1,5 +1,6 @@
 import React from "react";
 import GLAlogo from "./assets/images/GLA_Logo.png";
+import SIG from './assets/images/gig_sig.png';
 import { Button } from "@mui/material";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
@@ -71,7 +72,7 @@ function Cert() {
               <b>{month + " " + year}</b>
             </div>
             <div className="sig">
-              <span className="sig_space"></span>
+              <span className="sig_space"><img src={SIG} alt={''} /></span>
               <span className="authorizer">
                 Director of People Development and Applied Knwoledge
               </span>
