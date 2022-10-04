@@ -25,6 +25,7 @@ const dataTree = {
 const errorTree = {
   fullname: false,
   email: false,
+  phone: false,
   subsidiary: false,
   department: false,
   location: false,
@@ -43,6 +44,10 @@ const errorTree = {
   learning_application: false
 };
 
+
+
+
+
 const appContext = createContext();
 
 const AppContextProvider = ({ children }) => {
@@ -50,7 +55,14 @@ const AppContextProvider = ({ children }) => {
   const [errors, setErrors] = useState(errorTree);
     const [page, setPage] = useState("")
 
-  const value = { partnerData, setPartnerData, page, setPage, errors, setErrors};
+  const value = {
+    partnerData,
+    setPartnerData,
+    page,
+    setPage,
+    errors,
+    setErrors,
+  };
 
   return <appContext.Provider value={value}>{children}</appContext.Provider>;
 };

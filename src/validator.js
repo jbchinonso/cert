@@ -5,16 +5,19 @@ function validator(partnerData, errors, setErrors) {
   let success = true;
   for (const name in partnerData) {
     let field = partnerData[name];
-    if (!field && name !== "areas_to_improve") {
+    if (
+      (!field && name !== "areas_to_improve") ||
+      (!field && name !== "phone")
+    ) {
       setErrors((errors) => {
         return { ...errors, [name]: true };
       });
-        success = false;
+      success = false;
     } else {
-        setErrors((errors) => {
-          return { ...errors, [name]: false };
-        });
-        success = true;
+      setErrors((errors) => {
+        return { ...errors, [name]: false };
+      });
+      success = true;
     }
   }
     

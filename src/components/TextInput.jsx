@@ -2,17 +2,18 @@ import React, { useCallback } from 'react'
 import { TextField } from '@mui/material'
 import { useAppContext } from '../AppContext'
 
-function TextInput({ label, placeholder, name, required }) {
+function TextInput({ label, placeholder, name, required, handler }) {
 
-  const { partnerData, setPartnerData, errors, } = useAppContext();
+  const { partnerData, setPartnerData, errors } = useAppContext();
 
 
   const handleChange = useCallback(
     (e) => {
       const data = e.target.value;
       setPartnerData({ ...partnerData, [name]: data });
+      handler(e);
     },
-    [name, partnerData, setPartnerData]
+    [name, partnerData, setPartnerData, handler]
   );
 
 
@@ -30,6 +31,7 @@ function TextInput({ label, placeholder, name, required }) {
           onChange={handleChange}
           label={placeholder}
           variant="standard"
+          name={name}
         />
         {errors[name] && <span className='error'>please enter a valid response</span>}
       </div>
