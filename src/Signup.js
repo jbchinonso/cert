@@ -3,7 +3,7 @@ import Logo from "./components/Logo";
 import PageLoader from "./components/PageLoader";
 import { ToastContainer } from "react-toastify";
 import HeaderText from "./components/HeaderText";
-import Text from "./components/Text";
+// import Text from "./components/Text";
 import TextInput from "./components/TextInput";
 import PhoneInput from "./components/PhoneInput";
 import { Button } from "@mui/material";
