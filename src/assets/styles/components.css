@@ -87,7 +87,9 @@ label[data-shrink="false"]
 .selectInput .MuiFormControl-root{
     padding-bottom: 20px;
 }
-
+.wrapper .MuiFormControlLabel-labelPlacementEnd .css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+  width: 100%;
+}
 
 /* userRating component styles */
 

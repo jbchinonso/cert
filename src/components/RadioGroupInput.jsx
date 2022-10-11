@@ -1,10 +1,11 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import {
   FormControl,
   FormLabel,
   RadioGroup,
   FormControlLabel,
   Radio,
+  TextField,
   // TextField
 } from "@mui/material";
 
@@ -12,6 +13,7 @@ import {useAppContext} from "../AppContext"
 
 function RadioGroupInput({ label, locations, required, name }) {
   const { partnerData, setPartnerData, errors } = useAppContext();
+  const [others, setOthers] = useState("")
   
   const handleChange = useCallback((e) => {
     const data = e.target.value
@@ -44,15 +46,21 @@ function RadioGroupInput({ label, locations, required, name }) {
                 />
               );
             })}
-            {/* <FormControlLabel
-              value="other"
+            <FormControlLabel
+              value={others}
               control={<Radio />}
-              label={<TextField label="Other" variant="standard" />}
-            /> */}
+              label={
+                <TextField
+                  label="others"
+                  variant="standard"
+                  onChange={(e) => {setOthers(e.target.value)}}
+                />
+              }
+            />
           </RadioGroup>
-        {errors[name] && (
-          <span className="error">please select a valid option</span>
-        )}
+          {errors[name] && (
+            <span className="error">please select a valid option</span>
+          )}
         </FormControl>
       </div>
     </div>
