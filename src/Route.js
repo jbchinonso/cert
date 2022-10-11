@@ -8,6 +8,7 @@ import {
   Route as PageRoute,
   Routes,
 } from "react-router-dom";
+import Attendance from './Attendance'
 
 function Route() {
     const { page } = useAppContext();
@@ -23,6 +24,7 @@ function Route() {
                 <Routes>
                   <PageRoute exact path="/" element={<App />} />
                   <PageRoute exact path="/registration" element={<Signup />} />
+                  <PageRoute exact path="/attendance" element={<Attendance/>} />
                 </Routes>
               </Router>
             );;
