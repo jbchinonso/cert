@@ -50,7 +50,7 @@ function Attendance() {
           <Text
             title={"Attendance Register"}
             content={
-              "Thanks for showing up today, please sign in with your email address below"
+              "Thanks for showing up today, Please sign in with your official/work email address below"
             }
           />
         </header>
